@@ -7,7 +7,7 @@
 - pip install beautifulsoup4
 
 ## Создание скрипта скрапинга
-url = 'https://quotes.toscrape.com/'    #сохраняется адрес страницы, с которой будет поступать информация
+### url = 'https://quotes.toscrape.com/'    #сохраняется адрес страницы, с которой будет поступать информация
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')  #Получаем текстовый код страницы в формате lxml
 quotes = soup.find_all('span', class_='text') #Найдем все теги span с классом text на странице
